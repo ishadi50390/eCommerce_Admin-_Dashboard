@@ -8,4 +8,5 @@ const Category = sequelize.define("Category", {
   },
 });
 
+
 export default Category;
