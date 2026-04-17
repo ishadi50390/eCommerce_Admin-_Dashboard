@@ -1,0 +1,36 @@
+{
+  "name": "admin-dashboard",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@adminjs/express": "^6.1.1",
+    "@adminjs/sequelize": "^4.1.1",
+    "adminjs": "^7.8.17",
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-formidable": "^1.2.0",
+    "express-session": "^1.19.0",
+    "jsonwebtoken": "^9.0.3",
+    "nodemon": "^3.1.14",
+    "pg": "^8.20.0",
+    "pg-hstore": "^2.3.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "sequelize": "^6.37.8"
+  },
+  "overrides": {
+    "@tiptap/extension-horizontal-rule": "2.1.13",
+    "@tiptap/core": "2.1.13",
+    "@tiptap/starter-kit": "2.1.13"
+  },
+  "type": "module"
+}
