@@ -431,6 +431,10 @@ const adminRouter =
 app.use("/api", authRoutes);
 app.use(adminJs.options.rootPath, adminRouter);
 
+app.get("/", (req, res) => {
+  res.redirect(adminJs.options.rootPath);
+});
+
 sequelize.sync({ alter: true }).then(async () => {
   const ensureDefaultUser = async ({
     name,
