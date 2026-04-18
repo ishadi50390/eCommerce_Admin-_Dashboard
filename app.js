@@ -431,6 +431,15 @@ const adminRouter =
   );
 
 app.use("/api", authRoutes);
+
+// Fix for AdminJS serving bundle.js from a dot folder (.adminjs)
+app.get(adminJs.options.rootPath + "/frontend/assets/components.bundle.js", (req, res) => {
+  res.sendFile(path.resolve('.adminjs/bundle.js'), { dotfiles: 'allow' });
+});
+app.get(adminJs.options.rootPath + "/frontend/components.bundle.js", (req, res) => {
+  res.sendFile(path.resolve('.adminjs/bundle.js'), { dotfiles: 'allow' });
+});
+
 app.use(adminJs.options.rootPath, adminRouter);
 
 app.get("/", (req, res) => {
