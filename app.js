@@ -394,6 +394,8 @@ const adminJs = new AdminJS({
 
 if (process.env.NODE_ENV !== "production") {
   await adminJs.watch();
+} else {
+  await adminJs.initialize();
 }
 
 const adminRouter =
