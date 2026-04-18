@@ -393,7 +393,7 @@ const adminJs = new AdminJS({
 });
 
 if (process.env.NODE_ENV === "production") {
-  process.env.ADMIN_JS_SKIP_BUNDLE = "true";
+  await adminJs.initialize();
 } else {
   await adminJs.watch();
 }
