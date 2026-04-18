@@ -392,10 +392,10 @@ const adminJs = new AdminJS({
   },
 });
 
-if (process.env.NODE_ENV !== "production") {
-  await adminJs.watch();
+if (process.env.NODE_ENV === "production") {
+  process.env.ADMIN_JS_SKIP_BUNDLE = "true";
 } else {
-  await adminJs.initialize();
+  await adminJs.watch();
 }
 
 const adminRouter =
